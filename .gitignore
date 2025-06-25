@@ -1,0 +1,13 @@
+# Python
+
+*.pyc
+
+# exclude all pychache dirs
+# exclude all .pyc files
+**/__pychache__/**
+**/*.pyc
+
+
+poetry.lock
+.venv
+/.venv

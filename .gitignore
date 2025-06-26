@@ -11,3 +11,4 @@
 poetry.lock
 .venv
 /.venv
+/src/__pycache__

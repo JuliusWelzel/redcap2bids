@@ -35,8 +35,6 @@ participants_data.to_csv(
 # Provide descriptions of the columns in the participants.tsv file
 ####
  
-rc_metadata = rc_project.export_metadata(format_type="df")
-
 # Sample .json description for the participants.tsv columns
 json_description = {
     "participant_id": {

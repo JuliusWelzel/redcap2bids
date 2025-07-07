@@ -10,7 +10,6 @@ def filter_rc(rc_data, relevant_columns):
     filtered_data.rename(columns={
         'neuropsych_id': 'participant_id',
         'age_years': 'age',
-        'happiess_vas': 'happiness_vas'
     }, inplace=True)
 
     # Check for missing values in critical columns

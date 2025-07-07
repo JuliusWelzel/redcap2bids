@@ -28,7 +28,7 @@ def filter_rc(rc_data, relevant_columns):
     # calculate additional values
 
     # FACIT-Fatigue Scale (FACIT-F) score
-    filtered_data = calc_facit_total_score(filtered_data)
+    filtered_data = get_facit_total_score(filtered_data)
 
     # Filter to keep only the relevant columns
     filtered_data = filtered_data[relevant_columns]
@@ -36,9 +36,9 @@ def filter_rc(rc_data, relevant_columns):
 
     return filtered_data.reset_index(drop=True)
 
-def calc_facit_total_score(df):
+def get_facit_total_score(df):
     """Calculate the total score for the FACIT-Fatigue Scale."""
-    # Assuming the columns for the FACIT-Fatigue Scale are named 'facit_f_1', 'facit_f_2', ..., 'facit_f_n'
+    # Assuming the columns for the FACIT-Fatigue Scale are named 'facit_f_*', 'facit_f_2', ..., 'facit_f_n'
     facit_columns = [col for col in df.columns if col.startswith('facit_f_')]
     
     if not facit_columns:

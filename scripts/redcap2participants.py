@@ -23,6 +23,7 @@ rc_data = rc_project.export_records(format_type="df")
 relevant_columns = [
     'participant_id', 'age', 'happiness_vas', 'data_orga', 'facit_f_total'
 ]
+
 participants_data = filter_rc(rc_data, relevant_columns)
 
 # save as participants.tsv
@@ -57,7 +58,7 @@ json_description = {
     },
     "facit_f_total": {
         "Description": "Total score for the FACIT-Fatigue Scale",
-        "Units": "points"
+        "Units": "Points"
     }
 }
 

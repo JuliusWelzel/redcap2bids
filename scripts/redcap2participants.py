@@ -13,7 +13,7 @@ dir_root_bids = Path(r'W:\data\bids_data\juw_rc2bids')
 ####
 
 api_url = 'https://redcapdev.uol.de/api/'
-api_key = 'F6CDD83AB8AD6A3CC105D51CBB9907D4'
+api_key = 'YOU_KEY_HERE'  # Replace with your actual API key
 rc_project = Project(api_url, api_key)
 
 # get data and all fields as pd.DataFrame

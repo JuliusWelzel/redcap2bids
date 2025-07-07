@@ -2,7 +2,6 @@ import json
 from pathlib import Path
 from redcap import Project
 
-from src.config import dir_proj
 from src.prep import filter_rc
 
 
@@ -15,10 +14,10 @@ dir_root_bids = Path(r'W:\data\bids_data\juw_rc2bids')
 
 api_url = 'https://redcapdev.uol.de/api/'
 api_key = 'F6CDD83AB8AD6A3CC105D51CBB9907D4'
-project = Project(api_url, api_key)
+rc_project = Project(api_url, api_key)
 
 # get data and all fields as pd.DataFrame
-rc_data = project.export_records(format_type="df")
+rc_data = rc_project.export_records(format_type="df")
 
 # filter the data to include only relevant columns
 relevant_columns = [
@@ -36,7 +35,7 @@ participants_data.to_csv(
 # Provide descriptions of the columns in the participants.tsv file
 ####
  
-rc_metadata = project.export_metadata(format_type="df")
+rc_metadata = rc_project.export_metadata(format_type="df")
 
 # Sample .json description for the participants.tsv columns
 json_description = {

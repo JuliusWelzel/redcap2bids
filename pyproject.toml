@@ -14,7 +14,6 @@ dependencies = [
     "ipykernel (>=6.29.5,<7.0.0)",
     "pycap (>=2.7.0,<3.0.0)",
     "rcol>=0.0.2",
-    "python-dotenv>=1.1.1",
 ]
 
 

@@ -12,3 +12,6 @@ poetry.lock
 .venv
 /.venv
 /src/__pycache__
+uv.lock
+
+.env

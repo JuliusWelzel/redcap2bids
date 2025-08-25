@@ -1,18 +1,18 @@
-from pathlib import Path
-from redcap import Project
-
-from src.instruments.ehi import ehi
-from src.instruments.fal import fal
+from dotenv import load_dotenv
 import pandas as pd
+from redcap import Project
+import os
+
+from rcol.instruments import fal, ehi
 
 
 ####
 # Update RedCap project structure
 ####
-
+load_dotenv()
+RC_API_KEY = os.getenv("RC_API_KEY")
 api_url = 'https://redcapdev.uol.de/api/'
-api_key = '4A9DC1177762A57F4E3514B89F1D6F32'  # Replace with your actual API key
-rc_project = Project(api_url, api_key)
+rc_project = Project(api_url, RC_API_KEY)
 
 # stack all intruments pandas dfs
 # Example: stacking rc_data on top of itself

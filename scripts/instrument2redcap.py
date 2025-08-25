@@ -2,7 +2,7 @@ import pandas as pd
 from redcap import Project
 import os
 
-from rcol.instruments import fal, ehi
+from rcol.instruments import fal, moca
 
 
 ####
@@ -15,7 +15,7 @@ rc_project = Project(api_url, RC_API_KEY)
 # stack all intruments pandas dfs
 # Example: stacking rc_data on top of itself
 all_instruments = pd.concat([fal, 
-                             ehi], 
+                             moca], 
                              ignore_index=True)
 
 # upload instruments to RedCap using the import_metadata method
